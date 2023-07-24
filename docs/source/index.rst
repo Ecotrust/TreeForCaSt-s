@@ -17,10 +17,10 @@ The Forest Benchmarking and Modeling STAC product consist of one catalog of Wash
 
 Data for the stands catalog is provided as 7.5 minute quarter quad tiles, as defined in the `USGS topographic grid <https://carto.nationalmap.gov/arcgis/rest/services/map_indices/MapServer/4>`_. Each tile contains a label with stand features and attributes paired with the following datesets:
 
-* Digital Elevation Model (DEM) and topographic metrics from the 3DEP program. 
-* Orthoimagery from the National Agriculture Imagery Program (NAIP)
-* LandTrendr change detection estimates 
-* Gap Filled Landsat imagery. 
+* Digital Elevation Model (DEM) and topographic metrics. The DEM was obtained from the `USGS 3D Elevation Program (3DEP) Bare Earth Dynamic Service <https://www.usgs.gov/3d-elevation-program/about-3dep-products-services>`_ based on multi-resolution sources (lidar, IfSAR). 
+* Orthoimagery from the the USDA `National Agriculture Imagery Program (NAIP) <https://naip-usdaonline.hub.arcgis.com/>`_ during the agricultural peak growing season.
+* LandTrendr change detection estimates. LandTrendr is a time series analysis algorithm that uses Landsat imagery to detect changes in land cover and land use over time. The algorithm was implemented in Google Earth Engine by  `Kennedy et al. (2018) <https://www.mdpi.com/2072-4292/10/5/691>`_. 
+* Gap Filled Landsat imagery, representing gap-filled monthly observations from Landsat and MODIS sensors at a 30m spatial resolution, generated with the HISTARFM algorithm `(Moreno-Martínez et al. 2020) <https://www.sciencedirect.com/science/article/pii/S0034425720302716>`_. 
 
 The structure of the stands catalog is shown below.
 
