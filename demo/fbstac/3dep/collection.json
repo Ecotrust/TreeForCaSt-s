@@ -1,0 +1,407 @@
+{
+  "type": "Collection",
+  "id": "3dep",
+  "stac_version": "1.0.0",
+  "description": "The USGS 3D Elevation Program (3DEP) Bare Earth DEM Dynamic service is based on multi-resolution USGS DEM  sources and provides dynamic functions for visualization. These functions include: Hillshade, Aspect Map,  Hillshade Stretched, Multi-directional Hillshade, Slope Map, Elevation Tinted Hillshade, Contour. In addition  the OGC Web Map Service (WMS) and Web Coverage Service (WCS) interfaces are enabled. Data available in this  map service reflects all 3DEP DEM data published as of May 15, 2023.\n",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_OR_3DEP_10mDEM/109053_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_OR_3DEP_10mDEM/117025_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_OR_3DEP_10mDEM/110774_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_OR_3DEP_10mDEM/111016_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_OR_3DEP_10mDEM/111013_OR_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_WA_3DEP_10mDEM/107225_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_WA_3DEP_10mDEM/109945_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_WA_3DEP_10mDEM/109965_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_WA_3DEP_10mDEM/109967_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_WA_3DEP_10mDEM/107762_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_WA_3DEP_10mDEM/107225_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_WA_3DEP_10mDEM/109945_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_WA_3DEP_10mDEM/109965_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_WA_3DEP_10mDEM/109967_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_WA_3DEP_10mDEM/107762_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_WA_3DEP_10mDEM/107225_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_WA_3DEP_10mDEM/109945_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_WA_3DEP_10mDEM/109965_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_WA_3DEP_10mDEM/109967_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_WA_3DEP_10mDEM/107762_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_WA_3DEP_10mDEM/107225_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_WA_3DEP_10mDEM/109945_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_WA_3DEP_10mDEM/109965_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_WA_3DEP_10mDEM/109967_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_WA_3DEP_10mDEM/107762_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_WA_3DEP_10mDEM/107225_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_WA_3DEP_10mDEM/109945_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_WA_3DEP_10mDEM/109965_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_WA_3DEP_10mDEM/109967_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_WA_3DEP_10mDEM/107762_WA_3DEP_10mDEM.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    }
+  ],
+  "stac_extensions": [],
+  "extent": {
+    "bbox": [
+      [
+        -124.37499724208328,
+        41.999999520277804,
+        -119.18750093947924,
+        48.06249817868042
+      ]
+    ]
+  },
+  "license": "proprietary"
+}

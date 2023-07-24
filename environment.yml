@@ -1,0 +1,36 @@
+name: fbench-env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pystac=1.6
+  - rasterio
+  - pyproj=3.3
+  - shapely
+  - geopandas
+  - folium
+  - earthengine-api
+  - jupyter
+  - pandas
+  - matplotlib
+  - dask 
+  - graphviz
+  - imbalanced-learn
+  - pdal
+  - pip
+  - python-pdal
+  - rasterstats
+  - scikit-image
+  - scikit-learn>=1.0
+  - scikit-optimize
+  - seaborn
+  - tqdm
+  - richdem
+  - pysheds
+  - rio-cogeo
+  - pip:
+      - geetools
+      - autorank 

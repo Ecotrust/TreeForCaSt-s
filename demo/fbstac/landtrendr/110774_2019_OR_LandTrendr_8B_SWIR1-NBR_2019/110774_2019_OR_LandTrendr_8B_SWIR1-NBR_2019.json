@@ -1,0 +1,123 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019",
+  "properties": {
+    "eo:bands": [
+      {
+        "name": "ysd_swir1"
+      },
+      {
+        "name": "mag_swir1"
+      },
+      {
+        "name": "dur_swir1"
+      },
+      {
+        "name": "rate_swir1"
+      },
+      {
+        "name": "ysd_nbr"
+      },
+      {
+        "name": "mag_nbr"
+      },
+      {
+        "name": "dur_nbr"
+      },
+      {
+        "name": "rate_nbr"
+      }
+    ],
+    "proj:epsg": 4326,
+    "datetime": "2019-06-20T18:44:44.430000Z"
+  },
+  "geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -120.937312092102,
+                41.99992262525252
+              ],
+              [
+                -120.937312092102,
+                42.06271486361248
+              ],
+              [
+                -121.00010433046197,
+                42.06271486361248
+              ],
+              [
+                -121.00010433046197,
+                41.99992262525252
+              ],
+              [
+                -120.937312092102,
+                41.99992262525252
+              ]
+            ]
+          ]
+        },
+        "bbox": [
+          -121.00010433046197,
+          41.99992262525252,
+          -120.937312092102,
+          42.06271486361248
+        ]
+      }
+    ],
+    "bbox": [
+      -121.00010433046197,
+      41.99992262525252,
+      -120.937312092102,
+      42.06271486361248
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "image": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/landtrendr/2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019-cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized"
+    },
+    "thumbnail": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/landtrendr/2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019-preview.png",
+      "type": "image/png"
+    }
+  },
+  "bbox": [
+    -121.00010433046197,
+    41.99992262525252,
+    -120.937312092102,
+    42.06271486361248
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "landtrendr"
+}

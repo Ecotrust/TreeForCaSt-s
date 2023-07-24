@@ -1,0 +1,68 @@
+
+labels:
+  blm:
+    description: > 
+      The label collection represent polygons from the BLM FOIVEG_POLY feature class, a detailed classification 
+      of vegetation that covers forested lands and non-forest lands with broad and general classifications. 
+      It includes related table data from the MicroStorms (MS) system to describe forest vegetation and delineates 
+      polygons primarily based on differences in vegetative cover, size, and age. FOIVEG_POLY attributes describe 
+      both the overall forest stand as well as the layers within that stand, including cover type and ten-year age class.
+    label_type: vector
+    label_properties: [AGECLS_10]
+    label_description: 
+    label_task: regression
+    label_name: BLM Forest Operations Inventory Vegetation
+  dnr: 
+    description: > 
+      RS-FRIS is a remote-sensing based forest inventory for WA DNR State Trust lands. RS-FRIS predicts forest 
+      conditions using statistical models that relate field measurements to three-dimensional remotely-sensed data 
+      (PhoDAR and LiDAR point clouds). Forest metrics are predicted at a scale of 1/10th acre and stored as rasters. 
+      The attributes of each RIU are calculated as the mean of the raster cell values that fall within each polygon. 
+      Note: origin year and age are exceptions, and are based on the median value.The attributes represent forest 
+      conditions as of mid-2017. Origin year and age are periodically updated to reflect harvest activities; all 
+      other attributes continue to report mid-2017 conditions.
+    label_description: Predicted above ground live biomass. Units = metric tons / acre. 1 metric ton = 1000 kg.
+    label_type: vector
+    label_properties: [BIOMASS_LIVE]
+    label_task: regression
+    label_name: WA DNR Remotely Sensed Forest Resource Inventory (RS-FRIS) 
+
+items:
+  3dep:
+    description: > 
+      The USGS 3D Elevation Program (3DEP) Bare Earth DEM Dynamic service is based on multi-resolution USGS DEM 
+      sources and provides dynamic functions for visualization. These functions include: Hillshade, Aspect Map, 
+      Hillshade Stretched, Multi-directional Hillshade, Slope Map, Elevation Tinted Hillshade, Contour. In addition 
+      the OGC Web Map Service (WMS) and Web Coverage Service (WCS) interfaces are enabled. Data available in this 
+      map service reflects all 3DEP DEM data published as of May 15, 2023.
+    api: https://elevation.nationalmap.gov/arcgis/rest/services/3DEPElevation/ImageServer/exportImage
+
+  gflandsat:
+    description: > 
+      The Gap Filled Landsat (GFL) product is a 30m resolution, cloud-free, annual composite of Landsat 5, 7, and 8
+      surface reflectance data. The GFL product is generated using the Google Earth Engine (GEE) platform and is
+      available as a public GEE catalog. The GFL product is described in Kennedy et al. (2019). 
+    api: https://earthengine-highvolume.googleapis.com
+    collection: projects/KalmanGFwork/GFLandsat_V1
+
+  landtrendr:
+    description: >
+        LandTrendr is a time series processing algorithm designed to detect and characterize temporal trajectories
+        in Landsat pixel stacks. It is a linear spectral mixture model that uses a Kalman filter to identify
+        abrupt and gradual changes in spectral trajectories. The algorithm is designed to be scalable and
+        applicable to large time series stacks. It is implemented in Google Earth Engine (GEE) and is available
+        as a public GEE application. The algorithm is described in Kennedy et al. (2010) and Kennedy et al. (2012).
+        The GEE implementation is described in Kennedy et al. (2018).
+    api: https://earthengine.googleapis.com
+    collection: projects/USFS/LT-GEE
+
+  naip:
+    description: > 
+      The National Agriculture Imagery Program (NAIP) acquires aerial imagery during the agricultural growing seasons 
+      in the continental U.S. A primary goal of the NAIP program is to enable availability of ortho imagery within one 
+      year of acquisition. The NAIP provides 1-meter or better resolution Digital Orthophotography Orthoimagery in an 
+      orthorectified format. The NAIP DOQQ imagery is acquired at a one-meter ground sample distance (GSD) with a 
+      horizontal accuracy that matches within six meters of photo-identifiable ground control points, which are used 
+      during image inspection.
+    api: https://earthengine-highvolume.googleapis.com
+    collection: "USDA/NAIP/DOQQ"

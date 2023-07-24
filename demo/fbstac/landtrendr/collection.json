@@ -1,0 +1,407 @@
+{
+  "type": "Collection",
+  "id": "landtrendr",
+  "stac_version": "1.0.0",
+  "description": "LandTrendr is a time series processing algorithm designed to detect and characterize temporal trajectories in Landsat pixel stacks. It is a linear spectral mixture model that uses a Kalman filter to identify abrupt and gradual changes in spectral trajectories. The algorithm is designed to be scalable and applicable to large time series stacks. It is implemented in Google Earth Engine (GEE) and is available as a public GEE application. The algorithm is described in Kennedy et al. (2010) and Kennedy et al. (2012). The GEE implementation is described in Kennedy et al. (2018).\n",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111013_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/117025_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/109053_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/110774_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021/111016_2021_OR_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111016_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/111013_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/109053_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/110774_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019/117025_2019_OR_LandTrendr_8B_SWIR1-NBR_2019.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109967_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107225_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109965_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/107762_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021/109945_2021_WA_LandTrendr_8B_SWIR1-NBR_2021.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    }
+  ],
+  "stac_extensions": [],
+  "extent": {
+    "bbox": [
+      [
+        -124.37499724208328,
+        41.999999520277804,
+        -119.18750093947924,
+        48.06249817868042
+      ]
+    ]
+  },
+  "license": "proprietary"
+}

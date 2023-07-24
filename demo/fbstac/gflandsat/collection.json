@@ -1,0 +1,407 @@
+{
+  "type": "Collection",
+  "id": "gflandsat",
+  "stac_version": "1.0.0",
+  "description": "The Gap Filled Landsat (GFL) product is a 30m resolution, cloud-free, annual composite of Landsat 5, 7, and 8 surface reflectance data. The GFL product is generated using the Google Earth Engine (GEE) platform and is available as a public GEE catalog. The GFL product is described in Kennedy et al. (2019). \n",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_Gap_Filled_Landsat_leafon/117025_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_Gap_Filled_Landsat_leafon/110774_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_Gap_Filled_Landsat_leafon/109053_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_Gap_Filled_Landsat_leafon/111016_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_Gap_Filled_Landsat_leafon/111013_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_Gap_Filled_Landsat_leafon/117025_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_Gap_Filled_Landsat_leafon/110774_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_Gap_Filled_Landsat_leafon/109053_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_Gap_Filled_Landsat_leafon/111016_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_Gap_Filled_Landsat_leafon/111013_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_Gap_Filled_Landsat_leafon/117025_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_Gap_Filled_Landsat_leafon/110774_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_Gap_Filled_Landsat_leafon/109053_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_Gap_Filled_Landsat_leafon/111016_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_Gap_Filled_Landsat_leafon/111013_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_Gap_Filled_Landsat_leafon/117025_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_Gap_Filled_Landsat_leafon/110774_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_Gap_Filled_Landsat_leafon/109053_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_Gap_Filled_Landsat_leafon/111016_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_Gap_Filled_Landsat_leafon/111013_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2021_OR_Gap_Filled_Landsat_leafon/117025_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2021_OR_Gap_Filled_Landsat_leafon/110774_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2021_OR_Gap_Filled_Landsat_leafon/109053_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2021_OR_Gap_Filled_Landsat_leafon/111016_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2021_OR_Gap_Filled_Landsat_leafon/111013_2021_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_Gap_Filled_Landsat_leafon/117025_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_Gap_Filled_Landsat_leafon/110774_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_Gap_Filled_Landsat_leafon/111013_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_Gap_Filled_Landsat_leafon/111016_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_Gap_Filled_Landsat_leafon/109053_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_Gap_Filled_Landsat_leafon/117025_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_Gap_Filled_Landsat_leafon/110774_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_Gap_Filled_Landsat_leafon/111013_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_Gap_Filled_Landsat_leafon/111016_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_Gap_Filled_Landsat_leafon/109053_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_Gap_Filled_Landsat_leafon/117025_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_Gap_Filled_Landsat_leafon/110774_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_Gap_Filled_Landsat_leafon/111013_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_Gap_Filled_Landsat_leafon/111016_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_Gap_Filled_Landsat_leafon/109053_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_Gap_Filled_Landsat_leafon/117025_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_Gap_Filled_Landsat_leafon/110774_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_Gap_Filled_Landsat_leafon/111013_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_Gap_Filled_Landsat_leafon/111016_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_Gap_Filled_Landsat_leafon/109053_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./117025_2019_OR_Gap_Filled_Landsat_leafon/117025_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./110774_2019_OR_Gap_Filled_Landsat_leafon/110774_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111013_2019_OR_Gap_Filled_Landsat_leafon/111013_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./111016_2019_OR_Gap_Filled_Landsat_leafon/111016_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109053_2019_OR_Gap_Filled_Landsat_leafon/109053_2019_OR_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_Gap_Filled_Landsat_leafon/109967_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_Gap_Filled_Landsat_leafon/109965_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_Gap_Filled_Landsat_leafon/107762_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_Gap_Filled_Landsat_leafon/109945_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_Gap_Filled_Landsat_leafon/107225_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_Gap_Filled_Landsat_leafon/109967_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_Gap_Filled_Landsat_leafon/109965_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_Gap_Filled_Landsat_leafon/107762_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_Gap_Filled_Landsat_leafon/109945_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_Gap_Filled_Landsat_leafon/107225_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_Gap_Filled_Landsat_leafon/109967_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_Gap_Filled_Landsat_leafon/109965_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_Gap_Filled_Landsat_leafon/107762_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_Gap_Filled_Landsat_leafon/109945_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_Gap_Filled_Landsat_leafon/107225_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_Gap_Filled_Landsat_leafon/109967_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_Gap_Filled_Landsat_leafon/109965_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_Gap_Filled_Landsat_leafon/107762_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_Gap_Filled_Landsat_leafon/109945_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_Gap_Filled_Landsat_leafon/107225_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_WA_Gap_Filled_Landsat_leafon/109967_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_WA_Gap_Filled_Landsat_leafon/109965_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_WA_Gap_Filled_Landsat_leafon/107762_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_WA_Gap_Filled_Landsat_leafon/109945_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_WA_Gap_Filled_Landsat_leafon/107225_2021_WA_Gap_Filled_Landsat_leafon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    }
+  ],
+  "stac_extensions": [],
+  "extent": {
+    "bbox": [
+      [
+        -124.37499724208328,
+        41.999999520277804,
+        -119.18750093947924,
+        48.06249817868042
+      ]
+    ]
+  },
+  "license": "proprietary"
+}

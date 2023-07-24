@@ -1,0 +1,57 @@
+{
+  "type": "Collection",
+  "id": "dnr-2021-stands",
+  "stac_version": "1.0.0",
+  "description": "RS-FRIS is a remote-sensing based forest inventory for WA DNR State Trust lands. RS-FRIS predicts forest  conditions using statistical models that relate field measurements to three-dimensional remotely-sensed data  (PhoDAR and LiDAR point clouds). Forest metrics are predicted at a scale of 1/10th acre and stored as rasters.  The attributes of each RIU are calculated as the mean of the raster cell values that fall within each polygon.  Note: origin year and age are exceptions, and are based on the median value.The attributes represent forest  conditions as of mid-2017. Origin year and age are periodically updated to reflect harvest activities; all  other attributes continue to report mid-2017 conditions.\n",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "item",
+      "href": "./107225_2021_wa_dnr_stands/107225_2021_wa_dnr_stands.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109965_2021_wa_dnr_stands/109965_2021_wa_dnr_stands.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109945_2021_wa_dnr_stands/109945_2021_wa_dnr_stands.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./109967_2021_wa_dnr_stands/109967_2021_wa_dnr_stands.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./107762_2021_wa_dnr_stands/107762_2021_wa_dnr_stands.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    }
+  ],
+  "stac_extensions": [],
+  "extent": {
+    "bbox": [
+      [
+        -124.37499724208328,
+        46.68749655680555,
+        -119.18750093947924,
+        48.06249817868042
+      ]
+    ]
+  },
+  "license": "proprietary"
+}

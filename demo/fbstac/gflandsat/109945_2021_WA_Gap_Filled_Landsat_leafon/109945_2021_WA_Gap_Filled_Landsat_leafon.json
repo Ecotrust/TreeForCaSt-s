@@ -1,0 +1,135 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "109945_2021_WA_Gap_Filled_Landsat_leafon",
+  "properties": {
+    "eo:bands": [
+      {
+        "name": "B1_mean_post"
+      },
+      {
+        "name": "P1_postSD"
+      },
+      {
+        "name": "B2_mean_post"
+      },
+      {
+        "name": "P2_postSD"
+      },
+      {
+        "name": "B3_mean_post"
+      },
+      {
+        "name": "P3_postSD"
+      },
+      {
+        "name": "B4_mean_post"
+      },
+      {
+        "name": "P4_postSD"
+      },
+      {
+        "name": "B5_mean_post"
+      },
+      {
+        "name": "P5_postSD"
+      },
+      {
+        "name": "B7_mean_post"
+      },
+      {
+        "name": "P7_postSD"
+      }
+    ],
+    "proj:epsg": 4326,
+    "datetime": "2021-04-01T04:00:00Z"
+  },
+  "geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -124.31246227759587,
+                47.812381839619476
+              ],
+              [
+                -124.31246227759587,
+                47.87517407797943
+              ],
+              [
+                -124.37525451595583,
+                47.87517407797943
+              ],
+              [
+                -124.37525451595583,
+                47.812381839619476
+              ],
+              [
+                -124.31246227759587,
+                47.812381839619476
+              ]
+            ]
+          ]
+        },
+        "bbox": [
+          -124.37525451595583,
+          47.812381839619476,
+          -124.31246227759587,
+          47.87517407797943
+        ]
+      }
+    ],
+    "bbox": [
+      -124.37525451595583,
+      47.812381839619476,
+      -124.31246227759587,
+      47.87517407797943
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "image": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/gflandsat/2021/109945_2021_WA_Gap_Filled_Landsat_leafon-cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized"
+    },
+    "thumbnail": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/gflandsat/2021/109945_2021_WA_Gap_Filled_Landsat_leafon-preview.png",
+      "type": "image/png"
+    }
+  },
+  "bbox": [
+    -124.37525451595583,
+    47.812381839619476,
+    -124.31246227759587,
+    47.87517407797943
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "gflandsat"
+}

@@ -1,0 +1,108 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "id": "107762_2021_Wa_NAIP_DOQQ",
+  "properties": {
+    "eo:bands": [
+      {
+        "name": "R"
+      },
+      {
+        "name": "G"
+      },
+      {
+        "name": "B"
+      }
+    ],
+    "proj:epsg": 4326,
+    "datetime": "2021-01-01T05:00:00Z"
+  },
+  "geometry": {
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "id": "0",
+        "type": "Feature",
+        "properties": {},
+        "geometry": {
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                -119.18747476701273,
+                47.99997702040214
+              ],
+              [
+                -119.18747476701273,
+                48.06249976417686
+              ],
+              [
+                -119.25000649394029,
+                48.06249976417686
+              ],
+              [
+                -119.25000649394029,
+                47.99997702040214
+              ],
+              [
+                -119.18747476701273,
+                47.99997702040214
+              ]
+            ]
+          ]
+        },
+        "bbox": [
+          -119.25000649394029,
+          47.99997702040214,
+          -119.18747476701273,
+          48.06249976417686
+        ]
+      }
+    ],
+    "bbox": [
+      -119.25000649394029,
+      47.99997702040214,
+      -119.18747476701273,
+      48.06249976417686
+    ]
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json",
+      "title": "Forest stands STAC catalog"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "image": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/naip/2021/107762_2021_Wa_NAIP_DOQQ-cog.tif",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized"
+    },
+    "thumbnail": {
+      "href": "https://fbstac-stands.s3.amazonaws.com/naip/2021/107762_2021_Wa_NAIP_DOQQ-preview.png",
+      "type": "image/png"
+    }
+  },
+  "bbox": [
+    -119.25000649394029,
+    47.99997702040214,
+    -119.18747476701273,
+    48.06249976417686
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v1.0.0/schema.json"
+  ],
+  "collection": "naip"
+}
