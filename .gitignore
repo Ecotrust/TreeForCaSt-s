@@ -76,7 +76,7 @@ target/
 # exclude data from source control by default
 # data/raw
 # data/dev
-data/
+data/tiles
 **/*.tif
 
 # Mac OS-specific storage files
