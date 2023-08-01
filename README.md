@@ -4,7 +4,7 @@ This project is an implementation of the SpatioTemporal Asset Catalog (STAC) spe
 
 ## Documentation
 
-[fbstac documentation](https://readthedocs...)
+[fbstac documentation](https://fbstac.readthedocs.io/en/latest/index.html)
 
 ## Explore catalog
 
