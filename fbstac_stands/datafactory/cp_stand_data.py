@@ -4,7 +4,7 @@ import shutil
 
 from pystac import Catalog
 
-from gdstools import ConfigLoader, image_collection, multithreaded_execution
+from gdstools import ConfigLoader, multithreaded_execution
 
 
 def copy_asset(src, dst, overwrite=False):
@@ -18,10 +18,6 @@ def copy_asset(src, dst, overwrite=False):
 
     try:
         shutil.copy(src, dst)
-        shutil.copy(
-            src.replace('-cog.tif', '-preview.png'), 
-            dst.replace('-cog.tif', '-preview.png'),
-        )
     except Exception as e:
         print(f'Error copying file {src}. Exception raised: {e}')
         
@@ -30,42 +26,29 @@ def copy_asset(src, dst, overwrite=False):
 def main(root):
     conf = ConfigLoader(root).load()
     root_catalog = Catalog.from_file(os.path.join(conf.CATALOG_PATH, 'catalog.json'))
+    prjdir = Path(conf.PROJDATADIR)
 
     # Print some basic metadata from the Catalog
     print(f"ID: {root_catalog.id}")
     print(f"Title: {root_catalog.title or 'N/A'}")
     print(f"Description: {root_catalog.description or 'N/A'}")
 
-    items = root_catalog.get_all_items()
-    cellids = set([item.id.split('_')[0] for item in items])
+    # items = root_catalog.get_child(collection_name).get_all_items()
+    items = [collection.get_all_items() for collection in root_catalog.get_all_collections()]
+    assets = [item.get_assets() for collection in items for item in collection]
+    hrefs = [[a[k].href for k in a.keys()] for a in assets]
+    hrefs = [h for sublist in hrefs for h in sublist] 
 
-    images = image_collection(conf.PROJDATADIR)
-    images = [img for img in images if Path(img).name.split('_')[0] in cellids]
-    previews = [img.replace('-cog.tif', '-preview.png') for img in images]
-
-    labels = image_collection(conf.PROJDATADIR + 'labels', file_pattern='*.geojson')
-
-    root_dirname = Path(conf.PROJDATADIR).name
-    idx = images[0].split('/').index(root_dirname)
-    targets = ['/'.join(conf.S3BUCKET.split('/') + img.split('/')[idx + 1:]) for img in images]
-    label_targets = ['/'.join(conf.S3BUCKET.split('/') + lab.split('/')[idx + 1:]) for lab in labels]
+    root_href = 'https://fbstac-stands.s3.amazonaws.com'
+    sources = [img.replace(root_href + '/data', prjdir.as_posix()) for img in hrefs]
+    targets = [img.replace(root_href, conf.CATALOG_PATH) for img in hrefs]
 
     params = [
         {
-            'src': img,
+            'src': src,
             'dst': dst,
         }
-        for img, dst in zip(images, targets)
-    ]
-
-    multithreaded_execution(copy_asset, params)
-
-    params = [
-        {
-            'src': lab,
-            'dst': dst,
-        }
-        for lab, dst in zip(labels, label_targets)
+        for src, dst in zip(sources, targets)
     ]
 
     multithreaded_execution(copy_asset, params)
