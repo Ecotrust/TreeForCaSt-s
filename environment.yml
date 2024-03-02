@@ -1,36 +1,37 @@
-name: fbench-env
+name: stac-env
 
 channels:
   - conda-forge
   - defaults
 
 dependencies:
-  - python=3.9
-  - pystac=1.6
-  - rasterio
-  - pyproj=3.3
-  - shapely
-  - geopandas
-  - folium
-  - earthengine-api
-  - jupyter
-  - pandas
-  - matplotlib
   - dask 
+  - earthengine-api
+  - folium
+  - geopandas
   - graphviz
   - imbalanced-learn
+  - jupyter
+  - matplotlib
+  - pandas
   - pdal
-  - pip
+  - pystac=1.8
+  - pyproj
+  - python=3.10
   - python-pdal
+  - rasterio
   - rasterstats
-  - scikit-image
-  - scikit-learn>=1.0
-  - scikit-optimize
-  - seaborn
-  - tqdm
   - richdem
-  - pysheds
   - rio-cogeo
+  - scikit-image
+  - scikit-learn
+  - scikit-optimize
+  - scipy
+  - seaborn
+  - shapely
+  - tqdm
+  - pysheds
+  - pip
   - pip:
-      - geetools
       - autorank 
+      - geetools
