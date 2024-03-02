@@ -3,30 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Forest Benchmarking and Modeling STAC 
-=====================================
+TreeForCaSt-s STAC Catalog 
+==========================
 
-Introduction
-------------
+Training and calibrating machine learning models requires benchmarking datasets that provide a point of reference to compare and evaluate algorithms. Benchmarking datasets minimizes variations in model performance due to differences in the type and quality of input data, data format and processing, and choice of assessment metrics, which allow modelers and developers to focus on model improvement and fine tuning. 
 
-The effective implementation of a forest monitoring and assessment strategy relies on the availability of extensive databases that capture specific information related to the location and characteristics of various forest attributes. These attributes encompass a wide range of conditions such as live biomass, species composition, forest structure, as well as incidence of anthropogenic and natural disturbances. By integrating and thoroughly analyzing these comprehensive datasets, researchers can significantly improve the efficacy and precision of their machine learning models employed for predicting important forest attributes to understand forest dynamics and enable informed decision-making regarding forest management and conservation practices.
-
-To facilitate the discovery, exploration, and analysis of forest attributes, we provide a a Spatiotemporal Asset Catalog (STAC) for Forest Benchmarking and Modeling. A STAC is a data specification that provides a standardized way to describe geospatial datasets and assets and a consistent structure and metadata schema that allows users to search and access relevant datasets more efficiently. 
-
-The Forest Benchmarking and Modeling STAC product consist of one catalog of Washington's DNR forest inventory stands and one catalog with forest inventory plots from the `Forest Inventory and Analysis (FIA) <https://www.fia.fs.fed.us/>`_ program. 
-
-Data for the stands catalog is provided as 7.5 minute quarter quad tiles, as defined in the `USGS topographic grid <https://carto.nationalmap.gov/arcgis/rest/services/map_indices/MapServer/4>`_. Each tile contains a label with stand features and attributes paired with the following datesets:
-
-* Digital Elevation Model (DEM) and topographic metrics. The DEM was obtained from the `USGS 3D Elevation Program (3DEP) Bare Earth Dynamic Service <https://www.usgs.gov/3d-elevation-program/about-3dep-products-services>`_ based on multi-resolution sources (lidar, IfSAR). 
-* Orthoimagery from the the USDA `National Agriculture Imagery Program (NAIP) <https://naip-usdaonline.hub.arcgis.com/>`_ during the agricultural peak growing season.
-* LandTrendr change detection estimates. LandTrendr is a time series analysis algorithm that uses Landsat imagery to detect changes in land cover and land use over time. The algorithm was implemented in Google Earth Engine by  `Kennedy et al. (2018) <https://www.mdpi.com/2072-4292/10/5/691>`_. 
-* Gap Filled Landsat imagery, representing gap-filled monthly observations from Landsat and MODIS sensors at a 30m spatial resolution, generated with the HISTARFM algorithm `(Moreno-Martínez et al. 2020) <https://www.sciencedirect.com/science/article/pii/S0034425720302716>`_. 
+TreeForCaSt-s, is a proof-of-concept benchmarking dataset for modeling forest composition and structure using field inventory stands and remote sensing data. TreeForCaSt-s has the following features: 1) it is provided as a Spatio-Temporal Asset Catalog (STAC), a standard data structure to represent geospatial information. 2) It is a multi-sensor and multi-resolution dataset, 3) is open source and it is entirely based on public datasets available online. TreeForCaSt-s is intended for training multi-task machine learning models and models that are robust to missing data. 
 
 The structure of the stands catalog is shown below.
 
 .. code-block:: text
 
-   Catalog (Root): fbstac_stands
+   Catalog (Root): treeforcast-s
       - catalog.json
       |_ Collection: dataset_id
       |     - collection.json
@@ -35,14 +23,14 @@ The structure of the stands catalog is shown below.
       |        |_ Asset: single or multiband COG
       |        |_ Asset: Thumbnail
       |
-      |_ Collection: labels_collection_id
+      |_ Collection: stand_collection_id
             - collection.json 
             |_ Item (Label extension): QQID_LABELCODE
                - qqid_labelcode.json
                - links: Links to items within the same QQ tile.
-                  |_ Asset: FeatureCollection with attributes for each label.
+                  |_ Asset: FeatureCollection with stand-level forest composition and structure attributes.
 
-`Browse stand catalog <https://radiantearth.github.io/stac-browser/#/external/fbstac-stands.s3.us-east-1.amazonaws.com/fbstac-stands/catalog.json?.language=en>`_
+`Browse stand catalog <https://radiantearth.github.io/stac-browser/#/external/fbstac-stands.s3.us-east-1.amazonaws.com/stands/fbstac-stands/catalog.json?.language=en>`_
 
 
 .. toctree::

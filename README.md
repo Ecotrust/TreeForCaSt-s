@@ -1,6 +1,8 @@
-# STAC implementation for Forest Benchmarking and Modeling
+# TreeForCaSt-s - Modeling Forest Composition and Structure
 
-This project is an implementation of the SpatioTemporal Asset Catalog (STAC) specification for Forest Benchmarking and Modeling. The goal of the project is to provide a standardized way of organizing and sharing geospatial data related to forest benchmarking and modeling.
+Training and calibrating machine learning models requires benchmarking datasets that provide a point of reference to compare and evaluate algorithms. Benchmarking datasets minimizes variations in model performance due to differences in the type and quality of input data, data format and processing, and choice of assessment metrics, which allow modelers and developers to focus on model improvement and fine tuning. 
+
+TreeForCaSt-s, a stand-level Spatio-Temporal Asset Catalog (STAC) for Modeling Forest Composition and Structure in the Pacific Northwest, is a proof-of-concept benchmarking dataset for modeling forest composition and structure using field inventory stands and remote sensing data. TreeForCaSt-s has the following features: 1) it is provided as a Spatio-Temporal Asset Catalog (STAC), a standard data structure to represent geospatial information. 2) It is a multi-sensor and multi-resolution dataset, 3) is open source and it is entirely based on public datasets available online. TreeForCaSt-s is intended for training multi-task machine learning models and models that are robust to missing data. 
 
 ## Documentation
 
@@ -8,4 +10,4 @@ This project is an implementation of the SpatioTemporal Asset Catalog (STAC) spe
 
 ## Explore catalog
 
-[Forest Benchmarking STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/fbstac-stands.s3.us-east-1.amazonaws.com/fbstac-stands/catalog.json?.language=en)
+[Forest Benchmarking STAC Catalog](https://radiantearth.github.io/stac-browser/#/external/fbstac-stands.s3.us-east-1.amazonaws.com/stands/fbstac-stands/catalog.json)
