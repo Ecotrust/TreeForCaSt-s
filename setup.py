@@ -1,6 +1,6 @@
 from setuptools import setup
 
 setup(
-    name='fbstacs',
+    name='treeforcast-s',
     py_modules=[]
 )
