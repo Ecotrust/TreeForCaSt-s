@@ -22,7 +22,7 @@ def main():
     # %%
     conf = ConfigLoader(Path(__file__).parent.parent).load()
     GRID = conf.GRID
-    STANDMAPSDIR = Path(conf.PROJDATADIR).parent / 'interim/stands'
+    STANDMAPSDIR = Path(conf.PROJDATADIR) / 'interim/stands'
     OUTPATH = Path(conf.PROJDATADIR)
 
     def save_tile(gdf, filepath, cols, overwrite=False):
@@ -48,7 +48,7 @@ def main():
 
         YEAR = stand.stem.split('_')[-1]
         AGENCY = stand.stem.split('_')[0]
-        STATE = stand.parent.parent.stem
+        STATE = 'OR' if AGENCY == 'blm' else 'WA'
 
         foi = gpd.read_file(stand).to_crs(crs=3857)
         
@@ -73,7 +73,7 @@ def main():
             if group.geometry.area.sum() >= (group.cell_area.iloc[0]) * 0.3
         ]
 
-        labels_path = Path(OUTPATH, 'labels', STATE, AGENCY, YEAR)
+        labels_path = Path(OUTPATH, 'processed/labels', AGENCY, YEAR)
         labels_path.mkdir(parents=True, exist_ok=True)
 
         params = [

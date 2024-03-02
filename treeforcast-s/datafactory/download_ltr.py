@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import geopandas as gpd
 import ee
+from typing import Union
 
 from gdstools import (
     create_directory_tree,
@@ -97,7 +98,7 @@ def parse_landtrendr_result(
 def get_landtrendr(
         bbox: tuple, 
         year: int, 
-        out_path: str or Path, 
+        out_path: Union[str, Path], 
         prefix:str=None, 
         epsg:int=4326, 
         scale:int=30, 
@@ -203,15 +204,14 @@ if __name__ == "__main__":
     
     run_as = "prod"
     conf = ConfigLoader(Path(__file__).parent.parent).load()
-    ltr_api = conf['items']['landtrendr']['api']
+    ltr_api = conf['items']['landtrendr']['providers']['Google']['api']
+    qq_shp = gpd.read_file(conf.GRID)
 
     if run_as == "dev":
-        GRID = conf.GRID
-        PROJDATADIR = conf.DEV_PROJDATADIR
+        PROJDATADIR = Path(conf.DEV_PROJDATADIR)
         WORKERS = 4
     elif run_as == "prod":
-        GRID = conf.GRID
-        PROJDATADIR = conf.PROJDATADIR
+        PROJDATADIR = Path(conf.PROJDATADIR) / 'processed'
         WORKERS = 20
     
     # Initialize the Earth Engine module.
@@ -221,16 +221,15 @@ if __name__ == "__main__":
 
     # %%
     # Load the QQ grid shapefile. Fetch data only for labels cellids
-    labels = image_collection(PROJDATADIR + "/labels", file_pattern='*.geojson')
+    labels = image_collection(PROJDATADIR / "labels", file_pattern='*.geojson')
     cellids = [int(Path(x).name.split('_')[0]) for x in labels]
     years = set([int(Path(x).name.split('_')[1]) for x in labels])
 
-    qq_shp = gpd.read_file(GRID)
     qq_shp['STATE'] = qq_shp.PRIMARY_STATE.apply(lambda x: x.upper()[:2])
     qq_shp = qq_shp[qq_shp.CELL_ID.isin(cellids)]
 
     # Overwrite years 
-    years = [2022, 2021, 2020]
+    years = [2021, 2022]
 
     for year in years:
         ltr_path = create_directory_tree(PROJDATADIR, "landtrendr", str(year))

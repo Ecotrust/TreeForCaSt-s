@@ -96,16 +96,17 @@ def get_gflandsat(
 if __name__ == "__main__":
 
     run_as = "prod"
+
     conf = ConfigLoader(Path(__file__).parent.parent).load()
-    api_url = conf['items']['gflandsat']['api']
+    api_url = conf['items']['gflandsat']['providers']['Google']['api']
+    gdf = gpd.read_file(conf.GRID)
     
     if run_as == "dev":
-        GRID = conf.GRID
-        PROJDATADIR = conf.DEV_PROJDATADIR       
+        PROJDATADIR = Path(conf.DEV_PROJDATADIR)
         WORKERS = 4
     elif run_as == "prod":
         GRID = conf.GRID
-        PROJDATADIR = conf.PROJDATADIR
+        PROJDATADIR = Path(conf.PROJDATADIR) / 'processed'
         WORKERS = 20
 
     # Initialize the Earth Engine module.
@@ -120,12 +121,11 @@ if __name__ == "__main__":
     years = set([Path(x).name.split('_')[1] for x in labels])
 
     # Load QQ shapefile
-    gdf = gpd.read_file(GRID)
     gdf['STATE'] = gdf.PRIMARY_STATE.apply(lambda x: x.upper()[:2])
-    # gdf = gdf[gdf.CELL_ID.isin(cellids)]
+    gdf = gdf[gdf.CELL_ID.isin(cellids)]
 
     # Overwrite years if needed
-    years = [2017, 2018, 2019, 2020, 2021]
+    years = [2021, 2022]
 
     for year in years:
 
@@ -153,7 +153,7 @@ if __name__ == "__main__":
                 "out_path": out_path,
                 "prefix": f"{row.CELL_ID}_{year}_{row.STATE}",
                 "season": "leafon",
-                "overwrite": True,
+                "overwrite": False,
             } for row in gdf.itertuples()
         ]
 

@@ -4,7 +4,7 @@ Download Digital Elevation Model (DEM) from the 3DEP web service and calculate t
 # %%
 import os
 import sys
-from typing import List, Tuple
+from typing import Union, Tuple
 import requests
 from pathlib import Path
 import contextlib
@@ -29,7 +29,6 @@ from tqdm import tqdm
 from pyproj import CRS
 
 from gdstools import (
-    create_directory_tree,
     degrees_to_meters,
     split_bbox,
     print_message,
@@ -103,7 +102,9 @@ def dem_from_tnm(bbox, res=10, crs=4326, **kwargs):
     return dem
 
 
-def download_dem(filepath:str or Path, bbox:tuple, res:int=10, incrs:int=4326, **kwargs):
+from typing import Union
+
+def download_dem(filepath: Union[str, Path], bbox: tuple, res: int = 10, incrs: int = 4326, **kwargs):
     """
     Retrieves a Digital Elevation Model (DEM) image from The National Map (TNM)
     web service.
@@ -584,6 +585,8 @@ def classify_landform(tpi_near, tpi_far, slope):
 
 
 def center_crop_array(new_size, array):
+    """Crops an array to a new size, centered on the original array.
+    """
     xpad, ypad = (np.subtract(array.shape, new_size)/2).astype(int)
     dx, dy = np.subtract(new_size, array[xpad:-xpad, ypad:-ypad].shape)
     return array[xpad:-xpad+dx, ypad:-ypad+dy]
@@ -659,7 +662,7 @@ def fetch_dems(
     cell_id: str,
     geom: gpd.GeoSeries,
     state: str,
-    out_dir: str or Path,
+    out_dir: Union[str, Path],
     res:int=10,
     padding:int=1e3,
     overwrite:bool=False,
@@ -838,14 +841,13 @@ if __name__ == '__main__':
     run_as = 'prod'
     res = 10
     conf = ConfigLoader(Path(__file__).parent.parent).load()
+    gdf = gpd.read_file(conf.GRID)
 
     if run_as == 'dev':
         PROJDATADIR = Path(conf.DEV_PROJDATADIR)
-        GRID = Path(conf.GRID)
         threads = 4
     elif run_as == 'prod':
-        PROJDATADIR = Path(conf.PROJDATADIR)
-        GRID = Path(conf.GRID)
+        PROJDATADIR = Path(conf.PROJDATADIR) / 'processed'
         threads = 20
 
     out_path = PROJDATADIR / '3dep'
@@ -857,10 +859,9 @@ if __name__ == '__main__':
     labels = image_collection(PROJDATADIR, file_pattern='*.geojson')
     cellids = [int(Path(x).name.split('_')[0]) for x in labels]
 
-    gdf = gpd.read_file(GRID)
     gdf['PRIMARY_STATE'] = gdf.PRIMARY_STATE.apply(lambda x: x.upper()[:2])
     # cellids = [264178,248505,241042,173189]
-    # gdf = gdf[gdf.CELL_ID.isin(cellids)]
+    gdf = gdf[gdf.CELL_ID.isin(cellids)]
 
     # Filter out tiles without metadata
     # all_cellids = [int(Path(x).name.split('_')[0]) for x in image_collection(out_path)]
@@ -877,7 +878,7 @@ if __name__ == '__main__':
             'padding': 0,
             'out_dir': out_path,
             'res': res,
-            'overwrite': True
+            'overwrite': False
         } for row in gdf.itertuples()
     ]
 

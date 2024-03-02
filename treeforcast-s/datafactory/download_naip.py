@@ -4,6 +4,7 @@ Fetch NAIP images from Google Earth Engine (GEE) for each tile in the USGS 7.5 m
 # %%
 import os
 from pathlib import Path
+from typing import Union
 from datetime import datetime
 from functools import partial
 from PIL import Image
@@ -73,18 +74,25 @@ def naip_from_gee(
         .filterBounds(eebbox)
     )
 
+    assert collection.size().getInfo() > 0, f"No images found for {year}"
+    
     date_range = collection.reduceColumns(ee.Reducer.minMax(), ['system:time_start'])
     ts_end, ts_start = date_range.getInfo().values()
 
-    image = GEEImageLoader(collection.median().clip(eebbox))
-    imarray, profile = quad_fetch(
-        collection, 
-        bbox, 
-        dim=dim, 
-        num_threads=num_threads, 
-        epsg=epsg, 
-        scale=scale
-    )
+    
+    try: 
+        image = GEEImageLoader(collection.median().clip(eebbox))
+
+        imarray, profile = quad_fetch(
+            collection, 
+            bbox, 
+            dim=dim, 
+            num_threads=num_threads, 
+            epsg=epsg, 
+            scale=scale
+        )
+    except Exception as e:
+        raise Exception(f"Failed to fetch NAIP image: {e}")
 
     image.metadata_from_collection(collection)
     image.set_property("system:time_start", ts_start)# * 1000)
@@ -177,7 +185,7 @@ def quad_fetch(
 def get_naip(
     bbox:tuple, 
     year:int, 
-    outpath: str or Path, 
+    outpath: Union[str, Path], 
     dim:int=3, 
     overwrite:bool=False, 
     num_threads:int=None
@@ -230,6 +238,7 @@ def get_naip(
 
     with open(outpath.parent / outpath.name.replace('-cog.tif', '-metadata.json'), 'w') as f:
         json.dump(metadata, f, indent=2)
+        
     save_cog(image, profile, outpath, overwrite=overwrite)
 
     return
@@ -302,30 +311,32 @@ if "__main__" == __name__:
 
     run_as = "prod"
     conf = ConfigLoader(Path(__file__).parent.parent).load()
-    api_url = conf['items']['naip']['api']
+    api_url = conf['items']['naip']['providers']['Google']['api']
+    GRID = conf.GRID
+    qq_shp = gpd.read_file(GRID)
 
     if run_as == "dev":
-        GRID = conf.DEV_GRID
-        PROJDATADIR = conf.DEV_PROJDATADIR
+        PROJDATADIR = Path(conf.DEV_PROJDATADIR) 
+        qq_shp = qq_shp.iloc[:10]
+        years = [2021]
+        cellids = qq_shp.CELL_ID.tolist()
         WORKERS = 3
     elif run_as == "prod":
         GRID = conf.GRID
-        PROJDATADIR = conf.PROJDATADIR
+        PROJDATADIR = Path(conf.PROJDATADIR) / "processed"
         WORKERS = 3
+        # Load the QQ grid shapefile. Fetch data only for labels cellids
+        labels = image_collection(PROJDATADIR / "labels", file_pattern='*.geojson')
+        cellids = [int(Path(x).name.split('_')[0]) for x in labels]
+        years = set([int(Path(x).name.split('_')[1]) for x in labels])
 
-    ee.Initialize(opt_url=api_url)
-
-    # Load the QQ grid shapefile. Fetch data only for labels cellids
-    labels = image_collection(PROJDATADIR + "/labels", file_pattern='*.geojson')
-    cellids = [int(Path(x).name.split('_')[0]) for x in labels]
-    years = set([int(Path(x).name.split('_')[1]) for x in labels])
-
-    qq_shp = gpd.read_file(GRID)
     qq_shp['STATE'] = qq_shp.PRIMARY_STATE.apply(lambda x: str(x)[:2])
     qq_shp = qq_shp[qq_shp.CELL_ID.isin(cellids)]
 
+    ee.Initialize(opt_url=api_url)
+
     # Overwrite years if needed
-    years = [2020, 2021, 2022]#2017, 2018, 2019, 2020, 2021]
+    years = [2020]#2017, 2018, 2019, 2020, 2021]
 
     for year in years:
         outpath = Path(PROJDATADIR) / 'naip' / str(year)
