@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Forest Stands STAC catalog'
+project = 'TreeForCaSt-s'
 copyright = '2023, Ecotrust'
 author = 'Yankuic Galvan'
 release = '0.1'

@@ -4,7 +4,7 @@ Data Factory
 download_naip
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.download_naip
+.. automodule:: treeforcast-s.datafactory.download_naip
    :members:
    :undoc-members:
    :show-inheritance:
@@ -12,7 +12,7 @@ download_naip
 download_ltr
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.download_ltr
+.. automodule:: treeforcast-s.datafactory.download_ltr
    :members:
    :undoc-members:
    :show-inheritance:
@@ -20,7 +20,7 @@ download_ltr
 download_gfl
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.download_gfl
+.. automodule:: treeforcast-s.datafactory.download_gfl
    :members:
    :undoc-members:
    :show-inheritance:
@@ -28,7 +28,7 @@ download_gfl
 download_dem
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.download_dem
+.. automodule:: treeforcast-s.datafactory.download_dem
    :members:
    :undoc-members:
    :show-inheritance:
@@ -36,7 +36,7 @@ download_dem
 validate_dataset
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.validate_dataset
+.. automodule:: treeforcast-s.datafactory.validate_dataset
    :members:
    :undoc-members:
    :show-inheritance:
@@ -44,7 +44,7 @@ validate_dataset
 clip_stands
 ----------------------------------------
 
-.. automodule:: fbstac_stands.datafactory.clip_stands
+.. automodule:: treeforcast-s.datafactory.clip_stands
    :members:
    :undoc-members:
    :show-inheritance:

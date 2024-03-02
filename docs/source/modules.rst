@@ -1,8 +1,8 @@
-fbstac_stands
+treeforcast-s
 =============
 
 .. toctree::
    :maxdepth: 2
 
-   fbstac_stands
+   treeforcast-s
    datafactory

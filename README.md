@@ -6,7 +6,7 @@ TreeForCaSt-s, a stand-level Spatio-Temporal Asset Catalog (STAC) for Modeling F
 
 ## Documentation
 
-[fbstac documentation](https://fbstac.readthedocs.io/en/latest/index.html)
+[TreeForCaSt documentation](https://fbstac.readthedocs.io/en/latest/index.html)
 
 ## Explore catalog
 
